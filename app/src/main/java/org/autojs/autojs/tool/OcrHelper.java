@@ -9,7 +9,9 @@ import java.io.File;
 public class OcrHelper {
     private TessBaseAPI tessBaseAPI;
 
-    public OcrHelper(String dataPath, String language) {
+    public OcrHelper(String dataPath) {
+        // دعم اللغات: العربية + الإنجليزية + الروسية
+        String language = "ara+eng+rus";
         tessBaseAPI = new TessBaseAPI();
         tessBaseAPI.init(dataPath, language);
     }
